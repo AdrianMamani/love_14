@@ -1,0 +1,1 @@
+function irATercera() { window.location.href = "tercera.html"; }

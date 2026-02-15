@@ -1,0 +1,77 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Título */
+.titulo {
+    margin-bottom: 50px;
+    font-size: 34px;
+    color: #5b21b6;
+}
+
+/* Contenedor de regalos */
+.gifts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* base (tablet / móvil grande) */
+}
+
+/* Tarjeta */
+.gift-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Imagen */
+.gift-card img {
+    width: 220px;
+    height: auto;
+    display: block;
+}
+
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+
+    .titulo {
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+
+    .gifts {
+        gap: 35px; /* reduce espacio pero mantiene fila */
+    }
+
+    .gift-card img {
+        width: 100px; /* se hacen más pequeños pero siguen en fila */
+    }
+}
+
+@media (min-width: 1024px) {
+    .gifts {
+        gap: 220px; /* más separación en desktop */
+    }
+}

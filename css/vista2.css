@@ -1,0 +1,88 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Fondo */
+body {
+    background-color: #d4ccff;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* divide arriba y abajo */
+    align-items: center;
+}
+
+/* Parte superior (calendario + botón) */
+.top-section {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Calendario */
+.calendario {
+    width: 550px;
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+/* Botón */
+.btn-continuar {
+    background-color: #db4b86;
+    color: white;
+    border: none;
+    padding: 14px 38px;
+    font-size: 17px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-continuar:hover {
+    background-color: #db4b86;
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(237, 58, 192, 0.4);
+}
+
+.btn-continuar:active {
+    transform: scale(0.97);
+}
+
+/* Imagen inferior SIN padding inferior */
+.imagen-abajo {
+    width: 250px;
+    max-width: 85%;
+    height: auto;
+    display: block;
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+
+    .calendario {
+        width: 380px;
+    }
+
+    .imagen-abajo {
+        width: 180px;
+    }
+
+    .btn-continuar {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+}
