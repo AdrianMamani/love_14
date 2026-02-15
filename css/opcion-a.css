@@ -4,24 +4,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* mejor que height para responsive */
     font-family: 'Georgia', serif;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Contenedor */
 .carta-container {
-    padding: 20px;
+    width: 100%;
 }
 
 /* Carta */
 .carta {
     background: #fffdf5;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.4);
     position: relative;
+    margin: 0 auto;
 }
 
 /* Efecto papel real */
@@ -61,10 +64,33 @@ body {
     color: #5a003b;
 }
 
+/* Imagen beso */
 .beso {
     position: fixed;
-    bottom: 0;      /* 👈 pegado abajo */
-    right: 0;       /* 👈 pegado derecha */
-    width: 220px;   /* puedes ajustar tamaño */
+    bottom: 0;
+    right: 0;
+    width: 220px;
     pointer-events: none;
+}
+
+/* 📱 Pantallas pequeñas */
+@media (max-width: 600px) {
+
+    .carta {
+        padding: 25px;
+    }
+
+    .mensaje {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .carta h1 {
+        font-size: 20px;
+    }
+
+    /* Ocultar beso en móvil */
+    .beso {
+        display: none;
+    }
 }
