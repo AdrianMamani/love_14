@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* mejor que height para responsive */
+    min-height: 100vh;
     font-family: 'Georgia', serif;
     padding: 20px;
     box-sizing: border-box;
@@ -13,6 +13,8 @@ body {
 /* Contenedor */
 .carta-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 /* Carta */
@@ -24,7 +26,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.4);
     position: relative;
-    margin: 0 auto;
 }
 
 /* Efecto papel real */
@@ -54,11 +55,12 @@ body {
     line-height: 1.7;
     color: #333;
     margin-bottom: 20px;
+    text-align: center; /* 👈 centrado en móvil */
 }
 
 /* Firma */
 .firma {
-    text-align: right;
+    text-align: center; /* 👈 centrado en móvil */
     margin-top: 30px;
     font-style: italic;
     color: #5a003b;
@@ -77,6 +79,7 @@ body {
 @media (max-width: 600px) {
 
     .carta {
+        width: 85%;       /* 👈 más angosta */
         padding: 25px;
     }
 
@@ -89,8 +92,18 @@ body {
         font-size: 20px;
     }
 
-    /* Ocultar beso en móvil */
     .beso {
         display: none;
+    }
+}
+
+/* 💻 En pantallas grandes vuelve a alineación normal */
+@media (min-width: 601px) {
+    .mensaje {
+        text-align: left;
+    }
+
+    .firma {
+        text-align: right;
     }
 }
